@@ -11,7 +11,6 @@ import tqdm
 import numpy as np
 import subprocess
 import numpy as np
-import threading
 
 deviceid=0
 capture=cv2.VideoCapture(deviceid)
@@ -46,7 +45,7 @@ try:
         elif Pass == "GeBaYaShi":
             print("OPEN")
             ser.write("1".encode())
-            die()
+            quit()
             break
         else:
             print("System> パスワードが違います。もう一度入力してください。")
