@@ -8,14 +8,14 @@ import os
 import pickle
 
 #ディレクトリを変える
-os.chdir("C:\\Users\\kei31\\python0step\\Final_Weapon_for_Face\\faces_material\\Judge_assesment\\")
+os.chdir("C:\\Users\\****\\python0step\\Final_Weapon_for_Face\\faces_material\\Judge_assesment\\")
 
 with open("name_list.pkl","rb") as f:#復元！
     files=pickle.load(f)
     
 
 #カメラから取り込む場合
-os.chdir("C:\\Users\\kei31\\python0step\\Final_Weapon_for_Face\\faces_material\\examine_field\\")
+os.chdir("C:\\Users\\****\\python0step\\Final_Weapon_for_Face\\faces_material\\examine_field\\")
 deviceid=0
 capture=cv2.VideoCapture(deviceid)
 ret,frame=capture.read()
@@ -25,7 +25,7 @@ CheckFile=["img_from_camera.jpg"]
 """
 ##ディレクトリから取り込む場合
 
-os.chdir("C:\\Users\\kei31\\python0step\\Final_Weapon_for_Face\\faces_material\\examine_field")
+os.chdir("C:\\Users\\****\\python0step\\Final_Weapon_for_Face\\faces_material\\examine_field")
 CheckFile=glob.glob("*")
 print(CheckFile[0])
 """
@@ -96,7 +96,7 @@ for img, loc in zip(known_face_imgs, known_face_locs):
 )
 #print(known_face_encodings)######################################################
 
-os.chdir("C:\\Users\\kei31\\python0step\\Final_Weapon_for_Face\\faces_material\\Judge_assesment\\")
+os.chdir("C:\\Users\\****\\python0step\\Final_Weapon_for_Face\\faces_material\\Judge_assesment\\")
 
 #学習済み特徴量データを持ってくる
 with open("feature.pkl","rb") as f:#復元！
@@ -155,8 +155,8 @@ print(jgmsg)
 
 #今回検査した画像を別ファイルに移してしまう
 new_path=shutil.move(
-    "C:\\Users\\kei31\\python0step\\Final_Weapon_for_Face\\faces_material\\examine_field\\{}".format(CheckFile[0]),
-    "C:\\Users\\kei31\\python0step\\Final_Weapon_for_Face\\faces_material\\Judge_assesment\\used_material\\{}"
+    "C:\\Users\\****\\python0step\\Final_Weapon_for_Face\\faces_material\\examine_field\\{}".format(CheckFile[0]),
+    "C:\\Users\\****\\python0step\\Final_Weapon_for_Face\\faces_material\\Judge_assesment\\used_material\\{}"
     .format("{}.jpg".format(name))
 )
 
